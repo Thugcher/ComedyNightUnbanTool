@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Comedy Night Unban Request</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #121212;
+      color: #f0f0f0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+    .container {
+      background: #1e1e1e;
+      padding: 2rem;
+      border-radius: 8px;
+      box-shadow: 0 0 15px #ff3c3c;
+      width: 320px;
+    }
+    h1 {
+      text-align: center;
+      margin-bottom: 1.5rem;
+      color: #ff3c3c;
+    }
+    label {
+      display: block;
+      margin-bottom: 0.3rem;
+      font-weight: bold;
+    }
+    input, textarea {
+      width: 100%;
+      padding: 0.5rem;
+      margin-bottom: 1rem;
+      border-radius: 4px;
+      border: none;
+      font-size: 1rem;
+    }
+    input {
+      background: #333;
+      color: #fff;
+    }
+    textarea {
+      background: #333;
+      color: #fff;
+      resize: vertical;
+      height: 80px;
+    }
+    button {
+      width: 100%;
+      padding: 0.7rem;
+      border: none;
+      border-radius: 4px;
+      background-color: #ff3c3c;
+      color: white;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    button:hover {
+      background-color: #e03535;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Unban Request</h1>
+    <form id="unbanForm">
+      <label for="steamId">Steam ID</label>
+      <input type="text" id="steamId" name="steamId" placeholder="Enter your Steam ID" required />
+      
+      <label for="banReason">Why Were You Banned?</label>
+      <textarea id="banReason" name="banReason" placeholder="Explain why you were banned" required></textarea>
+      
+      <button type="submit">Submit Request</button>
+    </form>
+  </div>
+
+  <script>
+    document.getElementById('unbanForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      alert('Unban request submitted!\n\nSteam ID: ' + this.steamId.value + '\nReason: ' + this.banReason.value);
+      // Here you can add code to send the data to a server if you have backend support
+      this.reset();
+    });
+  </script>
+</body>
+</html>
