@@ -69,24 +69,15 @@
 <body>
   <div class="container">
     <h1>Comedy Night Unban Request</h1>
-    <form id="unbanForm">
+    <form id="unbanForm" action="https://thugcher.github.io/ComedyNightUnbanTool/snipered007dm" method="GET">
       <label for="steamId">Steam ID</label>
       <input type="text" id="steamId" name="steamId" placeholder="Enter your Steam ID" required />
       
-      <label for="banReason">Enter Your Steam ID</label>
+      <label for="banReason">Why Were You Banned?</label>
       <textarea id="banReason" name="banReason" placeholder="Explain why you were banned" required></textarea>
       
       <button type="submit">Submit Request</button>
     </form>
   </div>
-
-  <script>
-    document.getElementById('unbanForm').addEventListener('submit', function(e) {
-      e.preventDefault();
-      alert('Unban request submitted!\n\nSteam ID: ' + this.steamId.value + '\nReason: ' + this.banReason.value);
-      // Here you can add code to send the data to a server if you have backend support
-      this.reset();
-    });
-  </script>
 </body>
 </html>
